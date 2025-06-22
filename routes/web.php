@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Alumnos\CreateAlumno;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -16,6 +18,12 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::get('/alumnos/registrar', CreateAlumno::class)
+    ->middleware(['auth'])
+    ->name('alumnos.create');
+
+Route::post('/alumnos', CreateAlumno::class)->name('alumnos.store');    
 
 Route::group(['middleware' => ['auth', 'role:admin']], function () {
     Route::get('/admin', function () {

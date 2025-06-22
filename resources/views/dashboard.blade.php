@@ -246,7 +246,7 @@
                                             </div>
                                             <span class="text-sm font-medium text-gray-700">Nuevo Curso</span>
                                         </a>
-                                        <a href="#" class="flex flex-col items-center justify-center p-4 rounded-lg border border-gray-200 hover:bg-gray-50 transition">
+                                        <a href="{{ route('alumnos.create') }}" class="flex flex-col items-center justify-center p-4 rounded-lg border border-gray-200 hover:bg-gray-50 transition">
                                             <div class="bg-yellow-100 p-3 rounded-full mb-2">
                                                 <svg class="h-6 w-6 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
